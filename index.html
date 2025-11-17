@@ -495,3 +495,102 @@
 </html>
 
 
+
+
+
+
+
+
+
+
+
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Botão PLAY - Exemplo</title>
+  <style>
+    :root{
+      --play-size: 62px; /* tamanho padrão */
+      --play-color: #28a745; /* verde */
+      --play-shadow: 0 6px 18px rgba(0,0,0,0.25);
+    }
+
+    /* Reset simples para o exemplo */
+    html,body{height:100%;margin:0;font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial}
+
+    /* Conteúdo apenas para demonstrar posição fixa do botão */
+    .page-demo{min-height:100vh;padding:2rem}
+
+    /* Estilo do botão fixo */
+    .play-fab{
+      position:fixed;
+      left:16px; /* distância da borda esquerda */
+      bottom:16px; /* distância da borda inferior */
+      width:var(--play-size);
+      height:var(--play-size);
+      border-radius:50%;
+      display:inline-grid;
+      place-items:center;
+      background:linear-gradient(180deg,var(--play-color), #1f7a37 90%);
+      box-shadow:var(--play-shadow);
+      text-decoration:none;
+      color:white;
+      font-weight:700;
+      letter-spacing:0.6px;
+      user-select:none;
+      -webkit-tap-highlight-color: transparent;
+      transition:transform .14s ease, box-shadow .14s ease, opacity .12s;
+      z-index:9999;
+      border:2px solid rgba(255,255,255,0.06);
+    }
+
+    .play-fab:focus{
+      outline:3px solid rgba(40,167,69,0.18);
+      transform:translateY(-2px) scale(1.02);
+    }
+
+    .play-fab:hover{transform:translateY(-4px) scale(1.03)}
+    .play-fab:active{transform:translateY(-1px) scale(.995)}
+
+    /* Texto menor em telas pequenas */
+    @media (max-width:420px){
+      :root{--play-size:54px}
+      .play-fab{font-size:12px;padding-left:2px}
+    }
+
+    /* Se quiser só o ícone ▶ em vez de texto, descomente abaixo e comente o texto 'PLAY' no HTML */
+    /* .play-fab .play-text{display:none} */
+    /* .play-fab .play-icon{display:block;font-size:22px} */
+  </style>
+</head>
+<body>
+
+  <main class="page-demo">
+    <h1>Exemplo de página</h1>
+    <p>Este arquivo demonstra o botão "PLAY" fixo no canto inferior esquerdo.</p>
+  </main>
+
+  <!-- Botão redondo verde no canto inferior esquerdo -->
+  <a
+    class="play-fab"
+    href="https://app.aguiaoficial.com/pr/stBCno8r"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Abrir PLAY"
+    title="PLAY"
+  >
+    PLAY
+    <!-- Se preferir um triângulo de play, substitua o texto acima por:
+         <span class="play-icon">▶</span>
+    -->
+  </a>
+
+</body>
+</html>
+
+
+
+
+
