@@ -507,11 +507,11 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Botão PLAY - Exemplo</title>
+  <title>Botões Fixos</title>
 
   <style>
     :root{
-      --play-size: 72px;
+      --size: 72px;
       --play-color: #28a745;
       --money-color: #ffc107;
       --shadow: 0 6px 18px rgba(0,0,0,0.25);
@@ -528,20 +528,13 @@
       padding:2rem;
     }
 
-    /* Container para alinhar os dois botões */
-    .fab-container{
+    /* BOTÃO PLAY (ESQUERDA) */
+    .play-fab{
       position:fixed;
       left:16px;
       bottom:16px;
-      display:flex;
-      gap:12px;
-      z-index:9999;
-    }
-
-    /* Botão PLAY */
-    .play-fab{
-      width:var(--play-size);
-      height:var(--play-size);
+      width:var(--size);
+      height:var(--size);
       border-radius:50%;
       display:flex;
       align-items:center;
@@ -553,17 +546,20 @@
       font-weight:700;
       letter-spacing:0.6px;
       transition:0.2s;
-      border:2px solid rgba(255,255,255,0.06);
+      z-index:9999;
     }
 
     .play-fab:hover{
-      transform:translateY(-4px) scale(1.03);
+      transform:translateY(-4px) scale(1.05);
     }
 
-    /* Botão Indique e Ganhe */
+    /* BOTÃO INDIQUE E GANHE (DIREITA) */
     .money-fab{
-      width:var(--play-size);
-      height:var(--play-size);
+      position:fixed;
+      right:16px;
+      bottom:16px;
+      width:var(--size);
+      height:var(--size);
       border-radius:50%;
       background:linear-gradient(180deg,var(--money-color), #d39e00 90%);
       box-shadow:var(--shadow);
@@ -575,7 +571,7 @@
       color:#000;
       font-weight:700;
       transition:0.2s;
-      border:2px solid rgba(255,255,255,0.2);
+      z-index:9999;
       padding:4px;
     }
 
@@ -597,7 +593,7 @@
     }
 
     @media (max-width:420px){
-      :root{--play-size:60px;}
+      :root{--size:60px;}
       .money-text{font-size:8px;}
     }
 
@@ -606,44 +602,34 @@
 
 <body>
 
-  <main class="page-demo">
-    <h1></h1>
-  </main>
+  <main class="page-demo"></main>
 
-  <!-- Container dos botões -->
-  <div class="fab-container">
+  <!-- Botão PLAY -->
+  <a
+    class="play-fab"
+    href="https://app.aguiaoficial.com/pr/stBCno8r"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    JOGAR
+  </a>
 
-    <!-- Botão PLAY -->
-    <a
-      class="play-fab"
-      href="https://app.aguiaoficial.com/pr/stBCno8r"
-      target="_blank"
-      rel="noopener noreferrer"
-      aria-label="Abrir PLAY"
-      title="PLAY"
-    >
-      JOGAR
-    </a>
-
-    <!-- Botão Indique e Ganhe -->
-    <a
-      class="money-fab"
-      href="https://bonus.acertosclub.com/"
-      target="_blank"
-      rel="noopener noreferrer"
-      aria-label="Indique e Ganhe"
-      title="Indique e Ganhe"
-    >
-      <div class="money-icon">💰</div>
-      <div class="money-text">Indique<br>e Ganhe</div>
-    </a>
-
-  </div>
+  <!-- Botão Indique e Ganhe -->
+  <a
+    class="money-fab"
+    href="https://bonus.acertosclub.com/"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    <div class="money-icon">💰</div>
+    <div class="money-text">Indique<br>e Ganhe</div>
+  </a>
 
 </body>
 </html>
 
 </body>
 </html>
+
 
 
