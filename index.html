@@ -372,34 +372,260 @@
         </section>
     </main>
 
-<!-- Mensagem Flutuante -->
+```html
+<!-- POPUP WHATSAPP -->
+
 <div id="mensagemFlutuante" class="mensagem-flutuante hidden">
-    <button id="fecharMensagemBtn" class="fechar-mensagem">X</button>
+
     <div class="mensagem-conteudo">
-        <img src="icons/Aguia Oficial.png" alt="Logo Aguia Oficial" class="logo-acertos">
-        <h2>Descubra o Aguia Oficial</h2><br>
-        <p>Bem-vindo ao <strong>Aguia Oficial</strong>, a plataforma de apostas online do Jogo do Bicho com a <strong>melhor cotação do mercado</strong>!</p>
-        <p>Desfrute de pagamentos de prêmios <strong>imediatos</strong>, sem burocracia e sem taxas.</p>
-        <br><h3>Bônus Incríveis</h3>
-        <ul class="bonus-list">
-            <li><strong>✔️30% na primeira recarga,</strong></li>
-            <li><strong>✔️10% em recargas subsequentes e</strong></li>
-            <li><strong>✔️20% nas recargas em dias de Federal.</strong></li>
-        </ul>
-        <h3>Ganhos Garantidos</h3><br>
-        <p><strong>Para cada R$1 apostado:</strong></p>
-        <ul class="ganhos-list">
-            <li><strong>💵 R$ 8.000,00</strong> na Milhar</li>
-            <li><strong>💵 R$ 800,00</strong> na Centena</li>
-            <li><strong>💵 R$ 80,00</strong> na Dezena</li>
-            <li><strong>💵 R$ 20,00</strong> no Grupo</li>
-            <li><strong>💵 R$ 8,00</strong> na Unidade</li>
-        </ul>
-        <p>🤳🏼Jogue nas principais loterias do Brasil e maximize suas chances de ganhar com nossas cotações imbatíveis!</p>
-        <a href="https://app.Aguia Oficial/pr/sbrqjugZ" class="cadastre-se-btn">Cadastre-se aqui</a>
-        <br><br><br><p>Ou encontre nosso aplicativo clicando no botão <img src="icons/jogar.png" alt="Jogar" class="icone-jogar"> <strong>Jogar</strong>.</p>
+
+        <!-- TOPO -->
+        <div class="whatsapp-topo">
+
+            <img
+            src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
+            class="logo-whatsapp">
+
+            <span class="grupo-online">
+                ● Grupo Online
+            </span>
+
+        </div>
+
+        <!-- TÍTULO -->
+        <h2>🔥 GRUPO VIP 🔥</h2>
+
+        <p class="subtitulo">
+            Palpites atualizados do Jogo do Bicho diretamente no WhatsApp.
+        </p>
+
+        <!-- BENEFÍCIOS -->
+        <div class="box-destaque">
+
+            <p>✅ Palpites todos os dias</p>
+
+            <p>✅ Milhar • Centena • Grupo</p>
+
+            <p>✅ Resultados atualizados</p>
+
+        </div>
+
+        <!-- BOTÃO WHATSAPP -->
+
+        <a href="https://chat.whatsapp.com/LNCfPg5M7au7DGl1tLG5Y6"
+        target="_blank"
+        class="btn-whatsapp">
+
+            ENTRAR NO GRUPO
+
+        </a>
+
+        <!-- RODAPÉ -->
+
+        <p class="rodape-msg">
+            ⚡ Entrada imediata
+        </p>
+
+        <!-- BOTÃO FECHAR -->
+
+        <button id="fecharMensagemBtn"
+        class="fechar-mensagem">
+
+            ❌ FECHAR
+
+        </button>
+
     </div>
+
 </div>
+
+<style>
+
+/* POPUP */
+
+.mensagem-flutuante{
+    position:fixed;
+    bottom:15px;
+    right:15px;
+    width:280px;
+    background:#fff;
+    border-radius:16px;
+    overflow:hidden;
+    z-index:999999;
+    box-shadow:0 8px 25px rgba(0,0,0,0.25);
+    animation:fadeIn .4s ease;
+    font-family:Arial,sans-serif;
+}
+
+/* CONTEÚDO */
+
+.mensagem-conteudo{
+    text-align:center;
+    padding:0;
+}
+
+/* TOPO */
+
+.whatsapp-topo{
+    background:linear-gradient(135deg,#25D366,#128C7E);
+    padding:10px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+
+.logo-whatsapp{
+    width:28px;
+    height:28px;
+}
+
+.grupo-online{
+    color:#fff;
+    font-size:11px;
+    font-weight:bold;
+}
+
+/* TÍTULO */
+
+.mensagem-conteudo h2{
+    font-size:20px;
+    margin-top:15px;
+    color:#111;
+}
+
+/* SUB */
+
+.subtitulo{
+    color:#666;
+    font-size:12px;
+    line-height:1.5;
+    padding:0 15px;
+    margin-top:8px;
+}
+
+/* BOX */
+
+.box-destaque{
+    background:#f5f5f5;
+    margin:14px;
+    border-radius:10px;
+    padding:12px;
+    text-align:left;
+}
+
+.box-destaque p{
+    margin:7px 0;
+    font-size:12px;
+    font-weight:600;
+    color:#222;
+}
+
+/* BOTÃO WHATSAPP */
+
+.btn-whatsapp{
+    display:block;
+    margin:15px;
+    background:linear-gradient(135deg,#25D366,#128C7E);
+    color:#fff;
+    text-decoration:none;
+    padding:13px;
+    border-radius:10px;
+    font-size:14px;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.btn-whatsapp:hover{
+    transform:scale(1.03);
+}
+
+/* RODAPÉ */
+
+.rodape-msg{
+    color:#888;
+    font-size:11px;
+    margin-bottom:12px;
+}
+
+/* BOTÃO FECHAR */
+
+.fechar-mensagem{
+    width:100%;
+    border:none;
+    background:#d90429;
+    color:#fff;
+    padding:12px;
+    font-size:14px;
+    font-weight:bold;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.fechar-mensagem:hover{
+    background:#b00020;
+}
+
+/* ANIMAÇÃO */
+
+@keyframes fadeIn{
+
+    from{
+        opacity:0;
+        transform:translateY(20px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
+
+/* MOBILE */
+
+@media(max-width:480px){
+
+    .mensagem-flutuante{
+        width:90%;
+        right:5%;
+        bottom:10px;
+    }
+
+}
+
+.hidden{
+    display:none;
+}
+
+</style>
+
+<script>
+
+/* MOSTRAR POPUP */
+
+setTimeout(() => {
+
+    document
+    .getElementById("mensagemFlutuante")
+    .classList
+    .remove("hidden");
+
+}, 3000);
+
+/* FECHAR POPUP */
+
+document
+.getElementById("fecharMensagemBtn")
+.addEventListener("click", function(){
+
+    document
+    .getElementById("mensagemFlutuante")
+    .style.display = "none";
+
+});
+
+</script>
+```
 
     <!-- Barra inferior com ícones -->
     <footer>

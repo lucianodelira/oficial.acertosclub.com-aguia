@@ -758,44 +758,213 @@ select:hover {
 }
 
 
-.mensagem-flutuante {
+```css
+/* =========================
+   POPUP WHATSAPP PREMIUM
+========================= */
+
+.mensagem-flutuante{
     position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(255, 255, 255, 0.95);
+    bottom: 20px;
+    right: 20px;
+    width: 360px;
+    background: #ffffff;
+    border-radius: 22px;
+    overflow: hidden;
+    z-index: 999999;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.25);
+    animation: aparecerWhatsapp 0.4s ease;
+    border: 1px solid rgba(0,0,0,0.08);
+}
+
+/* TOPO VERDE */
+
+.whatsapp-topo{
+    background: linear-gradient(135deg,#25D366,#128C7E);
+    padding: 18px;
     display: flex;
-    flex-direction: column;
     align-items: center;
-    justify-content: center;
-    z-index: 1000;
+    justify-content: space-between;
 }
 
-.fechar-mensagem {
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    background-color: #000;
-    color: #fff;
+.logo-whatsapp{
+    width: 38px;
+    height: 38px;
+}
+
+.grupo-online{
+    color: white;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+/* BOTÃO FECHAR */
+
+```css
+/* BOTÃO FECHAR ABAIXO DA MENSAGEM */
+
+.fechar-mensagem{
+    position: relative;
+    margin-top: 22px;
+    width: 100%;
+    padding: 16px;
     border: none;
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
-    font-size: 20px;
+    border-radius: 14px;
+    background: linear-gradient(135deg,#ff1e1e,#c40000);
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 800;
+    letter-spacing: 1px;
     cursor: pointer;
+    transition: 0.3s;
+    box-shadow: 0 6px 18px rgba(255,0,0,0.35);
+    text-transform: uppercase;
 }
 
-.mensagem-conteudo {
-    text-align: center;
-    max-width: 600px;
-    max-height: 80vh; /* Limita a altura para permitir rolagem */
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    overflow-y: auto; /* Habilita rolagem vertical */
+/* EFEITO HOVER */
+
+.fechar-mensagem:hover{
+    transform: translateY(-2px) scale(1.02);
+    box-shadow: 0 10px 24px rgba(255,0,0,0.45);
+    background: linear-gradient(135deg,#ff2d2d,#990000);
 }
+
+/* EFEITO PULSANDO */
+
+.fechar-mensagem{
+    animation: pulsarFechar 1.5s infinite;
+}
+
+@keyframes pulsarFechar{
+    0%{
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(1.03);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+```
+
+
+/* CONTEÚDO */
+
+.mensagem-conteudo{
+    padding: 24px;
+    text-align: center;
+}
+
+.mensagem-conteudo h2{
+    font-size: 26px;
+    color: #111;
+    margin-bottom: 12px;
+    font-weight: 800;
+}
+
+.subtitulo{
+    color: #666;
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* CAIXA DE BENEFÍCIOS */
+
+.box-destaque{
+    background: #f7f7f7;
+    border-radius: 14px;
+    padding: 16px;
+    text-align: left;
+    margin-bottom: 22px;
+    border: 1px solid #ececec;
+}
+
+.box-destaque p{
+    margin: 10px 0;
+    font-size: 15px;
+    color: #222;
+    font-weight: 600;
+}
+
+/* INFO */
+
+.info-grupo p{
+    color: #444;
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 22px;
+}
+
+/* BOTÃO */
+
+.btn-whatsapp{
+    display: block;
+    width: 100%;
+    background: linear-gradient(135deg,#25D366,#128C7E);
+    color: white;
+    text-decoration: none;
+    padding: 17px;
+    border-radius: 14px;
+    font-size: 17px;
+    font-weight: bold;
+    transition: 0.3s;
+    box-shadow: 0 6px 18px rgba(37,211,102,0.4);
+}
+
+.btn-whatsapp:hover{
+    transform: translateY(-2px);
+    box-shadow: 0 10px 22px rgba(37,211,102,0.45);
+}
+
+/* RODAPÉ */
+
+.rodape-msg{
+    margin-top: 18px;
+    color: #888;
+    font-size: 13px;
+}
+
+/* ANIMAÇÃO */
+
+@keyframes aparecerWhatsapp{
+    from{
+        opacity: 0;
+        transform: translateY(40px) scale(0.95);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+/* RESPONSIVO */
+
+@media(max-width:600px){
+
+    .mensagem-flutuante{
+        width: 92%;
+        right: 4%;
+        bottom: 15px;
+        border-radius: 18px;
+    }
+
+    .mensagem-conteudo{
+        padding: 20px;
+    }
+
+    .mensagem-conteudo h2{
+        font-size: 22px;
+    }
+
+    .btn-whatsapp{
+        padding: 15px;
+        font-size: 16px;
+    }
+
+}
+```
 
 .mensagem-conteudo img.logo-acertos {
     width: 250px;
