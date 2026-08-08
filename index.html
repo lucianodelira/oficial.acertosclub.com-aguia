@@ -375,86 +375,9 @@
 ```html
 
     
-<!-- POPUP WHATSAPP -->
-<div id="mensagemFlutuante" class="mensagem-flutuante hidden">
-    <div class="mensagem-conteudo">
-        <!-- TOPO -->
-        <div class="whatsapp-topo">
-            <img
-            src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
-            class="logo-whatsapp">
-            <span class="grupo-online">
-                ● Grupo Online
-            </span>
-        </div>
-
-        <!-- TÍTULO -->
-        <h2>🔥 GRUPO VIP 🔥</h2>
-        <p class="subtitulo">
-            Palpites atualizados do Jogo do Bicho diretamente no WhatsApp.
-        </p>
-
-        <!-- BENEFÍCIOS -->
-        <div class="box-destaque">
-            <p>✅ Palpites todos os dias</p>
-            <p>✅ Milhar • Centena • Grupo</p>
-            <p>✅ Resultados atualizados</p>
-        </div>
-
-        <!-- BOTÃO WHATSAPP (atualizado) -->
-        <a href="https://chat.whatsapp.com/BiiU4p1jYXIFUF1ybsZQr5"
-           class="btn-whatsapp"
-           onclick="abrirWhatsApp(this.href); return false;">
-            ENTRAR NO GRUPO
-        </a>
-
-        <!-- RODAPÉ -->
-        <p class="rodape-msg">
-            ⚡ Entrada imediata
-        </p>
-
-        <!-- BOTÃO FECHAR -->
-        <button id="fecharMensagemBtn" class="fechar-mensagem">
-            ❌ FECHAR
-        </button>
-    </div>
-</div>
-
-<script>
-/* Função que força abrir fora do iframe e do WebView */
 function abrirWhatsApp(url) {
-  try {
-    if (window.top !== window.self) {
-      window.top.open(url, '_blank');
-    } else {
-      window.open(url, '_blank');
-    }
-  } catch (e) {
-    window.open(url, '_blank');
-  }
-
-  // Fallback para WebViews
-  setTimeout(function() {
-    const a = document.createElement('a');
-    a.href = url;
-    a.target = '_blank';
-    a.rel = 'noopener noreferrer';
-    document.body.appendChild(a);
-    a.click();
-    document.body.removeChild(a);
-  }, 150);
+  window.location.href = url; // força sair da página atual
 }
-
-/* MOSTRAR POPUP */
-setTimeout(() => {
-    document.getElementById("mensagemFlutuante").classList.remove("hidden");
-}, 3000);
-
-/* FECHAR POPUP */
-document.getElementById("fecharMensagemBtn").addEventListener("click", function(){
-    document.getElementById("mensagemFlutuante").style.display = "none";
-});
-</script>
 ```
 
     <!-- Barra inferior com ícones -->
